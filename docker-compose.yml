@@ -1,0 +1,14 @@
+#to run use: docker-compose run nvim
+version: "3"
+
+services:
+  nvim:
+    build:
+      context: .
+      dockerfile: Dockerfile.rust
+    volumes:
+      - .:/app/
+      - home:/root/
+
+volumes:
+  home:
