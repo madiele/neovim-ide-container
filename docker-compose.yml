@@ -4,8 +4,8 @@ version: "3"
 services:
   nvim:
     build:
-      context: .
-      dockerfile: Dockerfile.rust
+      context: https://github.com/madiele/neovim-ide-container.git#main
+      dockerfile: Dockerfile
     volumes:
       - .:/app/
       - home:/root/
