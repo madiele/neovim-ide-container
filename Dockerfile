@@ -27,12 +27,20 @@ ENV PATH="/root/.local/bin:${PATH}"
 RUN locale-gen it_IT.UTF-8
 ENV LANG='it_IT.UTF-8' LANGUAGE='it_IT:en' LC_ALL='it_IT.UTF-8'
 
+# install mono
 RUN apt-get update \
 	&& apt-get install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common \
 	&& apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
 	&& apt-add-repository -y 'deb https://download.mono-project.com/repo/ubuntu stable-focal main' \
 	&& apt-get install -y mono-complete msbuild \
 	&& apt-get clean
+
+#install dotnet
+RUN wget https://dot.net/v1/dotnet-install.sh \
+	&& chmod u+x dotnet-install.sh \
+	&& ./dotnet-install.sh \
+	&& rm dotnet-install.sh \
+	&& echo 'export PATH=$HOME/.dotnet:$PATH' > /root/.bashrc
 
 COPY ./configs/ /root/.config/nvim
 
