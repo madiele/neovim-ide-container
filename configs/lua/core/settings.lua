@@ -37,25 +37,19 @@ M.treesitter_ensure_installed = {
   "cmake",
   "css",
   "dockerfile",
-  "go",
   "hcl",
   "html",
-  "java",
   "javascript",
   "json",
-  "kotlin",
-  "ledger",
   "lua",
   "markdown",
   "markdown_inline",
   "query",
   "python",
   "regex",
-  "terraform",
   "toml",
   "vim",
   "yaml",
-  "rust",
 }
 
 -- LSPs that should be installed by Mason-lspconfig
@@ -68,7 +62,7 @@ M.lsp_servers = {
   "texlab",
   "tsserver",
   "yamlls",
-  "rust_analyzer",
+  "omnisharp",
 }
 
 -- Tools that should be installed by Mason
