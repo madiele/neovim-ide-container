@@ -1,11 +1,11 @@
 local M = {}
 
 M._keys = {
-  { "<leader>lD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
+  { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
   { "<leader>ll", vim.diagnostic.open_float, desc = "Line Diagnostics" },
   -- { "<leader>lR", vim.lsp.buf.rename, desc = "Rename", has = "rename" },
   {
-    "<leader>lR",
+    "gR",
     function()
       require("inc_rename")
       return ":IncRename " .. vim.fn.expand("<cword>")
@@ -15,17 +15,17 @@ M._keys = {
     has = "rename",
   },
   { "<leader>li", "<cmd>LspInfo<cr>", desc = "Lsp Info" },
-  { "<leader>ld", "<cmd>Telescope lsp_definitions<cr>", desc = "Goto Definition", has = "definition" },
-  { "<leader>lr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
-  { "<leader>lI", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },
-  { "<leader>lt", "<cmd>Telescope lsp_type_definitions<cr>", desc = "Goto Type Definition" },
+  { "gd", "<cmd>Telescope lsp_definitions<cr>", desc = "Goto Definition", has = "definition" },
+  { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
+  { "gI", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },
+  { "gt", "<cmd>Telescope lsp_type_definitions<cr>", desc = "Goto Type Definition" },
   { "<leader>lk", vim.lsp.buf.hover, desc = "Hover" },
   { "<leader>lS", vim.lsp.buf.signature_help, desc = "Signature Help", has = "signatureHelp" },
   { "<c-k>", vim.lsp.buf.signature_help, mode = "i", desc = "Signature Help", has = "signatureHelp" },
-  { "<leader>ln", vim.diagnostic.goto_next, desc = "Next Diagnostic" },
-  { "<leader>lp", vim.diagnostic.goto_prev, desc = "Prev Diagnostic" },
-  { "<leader>la", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v" }, has = "codeAction" },
-  { "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document Symbols" },
+  { "gn", vim.diagnostic.goto_next, desc = "Next Diagnostic" },
+  { "gp", vim.diagnostic.goto_prev, desc = "Prev Diagnostic" },
+  { "ga", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v" }, has = "codeAction" },
+  { "gs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document Symbols" },
   { "<leader>le", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document Diagnostics" },
   { "<leader>lq", vim.diagnostic.setloclist, desc = "Diagnostics in qflist" },
   { "<leader>lws", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Workspace Symbols" },
