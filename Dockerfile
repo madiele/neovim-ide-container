@@ -11,7 +11,8 @@ RUN apt-get update \
     && apt-get clean
 
 # Install neovim
-RUN add-apt-repository -y ppa:neovim-ppa/unstable \
+RUN apt-get update --allow-unauthenticated \
+    && add-apt-repository -y ppa:neovim-ppa/unstable \
     && apt-get install -y neovim \
     && mkdir -p ~/.config/nvim/ \
     && apt-get clean
