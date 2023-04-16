@@ -18,7 +18,7 @@ RUN apt-get update --allow-unauthenticated \
     && apt-get clean
 
 # Install node (neded for some lsp)
-RUN apt-get update \
+RUN apt-get update --allow-unauthenticated \
     && curl -sL https://deb.nodesource.com/setup_14.x  | bash - \
     && apt-get install -y nodejs\
     && apt-get clean
