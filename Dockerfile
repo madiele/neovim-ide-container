@@ -17,11 +17,6 @@ RUN apt-get update --allow-unauthenticated \
     && mkdir -p ~/.config/nvim/ \
     && apt-get clean
 
-# Install node (neded for some lsp)
-RUN apt-get update --allow-unauthenticated \
-    && curl -sL https://deb.nodesource.com/setup_14.x  | bash - \
-    && apt-get install -y nodejs\
-    && apt-get clean
 
 ENV PATH="/root/.local/bin:${PATH}"
 
