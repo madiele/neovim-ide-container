@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM rust:1.68
 
 ENV DEBIAN_FRONTEND=noninteractive
 
