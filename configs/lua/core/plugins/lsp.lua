@@ -10,7 +10,7 @@ local M = {
   },
   config = function()
     require"lspconfig".omnisharp.setup {
-        cmd = { "dotnet", "/root/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll" },
+        cmd = { "dotnet", "C:\\Users\\mdieleuterio\\AppData\\Local\\nvim-data\\mason\\packages\\omnisharp\\OmniSharp.dll" },
         --cmd = { "dotnet", "/root/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll" },
 	handlers = {
 		["textDocument/definition"] = require('omnisharp_extended').handler,

@@ -35,7 +35,7 @@ local M = {
     ls.config.set_config({ history = true, updateevents = "TextChanged,TextChangedI" })
 
     -- load lua snippets
-    lua.load({ paths = os.getenv("HOME") .. "/.config/nvim/snippets/" })
+    lua.load({ "C:/Users/mdieleuterio/AppData/Local/nvim/snippets" })
     -- load friendly-snippets
     -- this must be loaded after custom snippets or they get overwritte!
     -- https://github.com/L3MON4D3/LuaSnip/blob/b5a72f1fbde545be101fcd10b70bcd51ea4367de/Examples/snippets.lua#L497
