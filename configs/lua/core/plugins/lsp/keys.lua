@@ -15,6 +15,7 @@ M._keys = {
     has = "rename",
   },
   { "<leader>li", "<cmd>LspInfo<cr>", desc = "Lsp Info" },
+  { "gd", function() require('omnisharp_extended').telescope_lsp_definitions() end, desc = "Goto Definition", has = "definition" },
   { "<leader>ld", "<cmd>Telescope lsp_definitions<cr>", desc = "Goto Definition", has = "definition" },
   { "<leader>lr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
   { "<leader>lI", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },

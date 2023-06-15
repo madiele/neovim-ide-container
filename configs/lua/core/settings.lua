@@ -63,6 +63,7 @@ M.lsp_servers = {
   "tsserver",
   "yamlls",
   "omnisharp",
+  "lua_ls",
 }
 
 -- Tools that should be installed by Mason
